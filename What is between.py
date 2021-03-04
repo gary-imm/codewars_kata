@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 #CODEWARS Kata exercise: What is between?
 #https://www.codewars.com/kata/55ecd718f46fba02e5000029/train/python
 #Tests Passed: 54
