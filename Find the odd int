@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+#CODEWARS Kata exercise: Find the odd int
+#https://www.codewars.com/kata/54da5a58ea159efa38000836/train/python
+#Tests Passed: 45
+#Tests Failed: 0
+#Given an array of integers, find the one that appears an odd number of times.
+#There will always be only one integer that appears an odd number of times.
+
+###I originally had this block of code, but it just returned a one integer
+###list, all codewars wanted was just the number #
+def find_it(seq):
+    odd_int = []
+    for item in seq:
+        if seq.count(item)%2 == 0:
+            pass
+        else:
+            if item in odd_int:
+                continue
+            else:
+                odd_int.append(item)
+    return odd_int
+
+arrr = [20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]
+print(find_it(arrr))
+
+###This code was accepted by CodeWars, it looks cleaner
+def find_it(seq):
+    for item in seq:
+        if seq.count(item)%2 == 0:
+            pass
+        else:
+            return item
+
+#tried to reduce lines of code further, received generator error
+def find_it2(seq):
+    item = (x for x in seq if seq.count(x)%2 == 1)
+    return (item)
